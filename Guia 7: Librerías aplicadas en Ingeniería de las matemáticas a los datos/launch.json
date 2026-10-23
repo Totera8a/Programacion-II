@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C: depurar archivo activo",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "C: compilar archivo activo",
+
+            "linux": {
+                "program": "${fileDirname}/${fileBasenameNoExtension}",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+
+            "windows": {
+                "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe"
+            }
+        },
+        {
+            "name": "C: depurar programa modular",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/programa",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "C: compilar programa modular",
+
+            "linux": {
+                "program": "${fileDirname}/programa",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+
+            "windows": {
+                "program": "${fileDirname}/programa.exe",
+                "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe"
+            }
+        }
+    ]
+}
